@@ -338,7 +338,6 @@ textarea {
   vertical-align: top;
   line-height: normal;
   resize: none;
-  overflow: auto;
 }
 [type="checkbox"],
 [type="radio"] {
@@ -516,6 +515,7 @@ button:focus,
   vertical-align: baseline;
   box-shadow: none;
   border-radius: 0;
+  will-change: auto;
   -webkit-transition: none 0.5s ease;
   transition: none 0.5s ease;
 }

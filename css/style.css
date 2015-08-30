@@ -135,12 +135,12 @@ select,
 textarea,
 input {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-  padding: .5em;
   border-width: 1px;
   border-style: solid;
   border-color: #bbbbbb;
   background-color: #ffffff;
   color: #2f2f2f;
+  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -232,34 +232,47 @@ input.noedit:focus {
 }
 input,
 select {
+  padding: 0 .5em;
   height: 2.3em;
   line-height: 1.3em;
 }
 textarea {
+  padding: .5em;
   min-height: 5em;
 }
 .forgot-password,
-#remember-password {
+.retrieveFormBlock > form + a {
   float: left;
   margin-top: -27px;
 }
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
+.filed-upgrade {
+  height: auto;
+  position: absolute;
+  z-index: -10;
+  will-change: auto;
+  -webkit-transition: none 0.5s ease;
+  transition: none 0.5s ease;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.filed-upgrade ~ .checkbox_radio {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
   font-size: 16px;
   height: 1em;
   width: 1em;
+  line-height: 0;
+  margin: 0;
   background: #ffffff;
   border: 1px solid #bbbbbb;
   color: transparent;
-  cursor: pointer;
-  display: inline-block;
-  outline: none;
 }
-input[type="checkbox"]:before,
-input[type="radio"]:before {
+.filed-upgrade ~ .checkbox_radio:before {
   content: "";
   position: absolute;
   left: 0;
@@ -270,39 +283,37 @@ input[type="radio"]:before {
   width: 0.625em;
   height: 0.625em;
 }
-input[type="checkbox"]:hover:before,
-input[type="radio"]:hover:before {
+.filed-upgrade:hover ~ .checkbox_radio:before {
   background: #eeeeee;
 }
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
+.filed-upgrade:checked ~ .checkbox_radio {
   border-color: #8fd400;
 }
-input[type="checkbox"]:checked:before,
-input[type="radio"]:checked:before {
+.filed-upgrade:checked ~ .checkbox_radio:before {
   background: #8fd400;
 }
-input[type="checkbox"]:disabled:checked:before,
-input[type="radio"]:disabled:checked:before {
-  color: #a2a2a2 !important;
+.filed-upgrade:disabled ~ .checkbox_radio {
+  background: #eeeeee !important;
+  border-color: #d5d5d5 !important;
+  color: transparent;
+}
+.filed-upgrade:disabled:checked ~ .checkbox_radio:before {
   background: #a2a2a2 !important;
 }
-input[type="radio"] {
-  border-radius: 1em;
+.filed-upgrade[type="radio"] ~ .checkbox_radio,
+.filed-upgrade[type="radio"] ~ .checkbox_radio:before {
+  border-radius: 10em;
 }
-input[type="radio"]:before {
-  border-radius: 1em;
-}
-input[type="checkbox"].switcher {
+.filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio {
   overflow: hidden;
   position: relative;
   width: 4em;
   height: 1.25em;
   line-height: 1.25em;
 }
-input[type="checkbox"].switcher:before {
+.filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio:before {
   font-size: 0.857rem;
-  line-height: 20px;
+  line-height: inherit;
   content: 'OFF';
   background: none;
   color: #f65314;
@@ -314,22 +325,15 @@ input[type="checkbox"].switcher:before {
   float: left;
   margin-left: 50%;
 }
-.ie8 input[type="checkbox"].switcher:before {
+.ie8 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio:before {
   font-size: 12px;
 }
-input[type="checkbox"].switcher:disabled:before {
-  color: #a2a2a2 !important;
-  background: none !important;
-}
-input[type="checkbox"].switcher:disabled:after {
-  background: #a2a2a2 !important;
-}
-input[type="checkbox"].switcher:after {
+.filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio:after {
   content: '';
   background: #f65314;
+  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  box-sizing: border-box;
   background: #bbbbbb;
   position: absolute;
   border: 1px solid #ffffff;
@@ -339,14 +343,21 @@ input[type="checkbox"].switcher:after {
   bottom: 0;
   width: 50%;
 }
-input[type="checkbox"].switcher:checked:before {
+.filed-upgrade[type="checkbox"].switcher:checked ~ .checkbox_radio:before {
   content: 'ON';
   margin-left: 0;
   color: #8fd400;
 }
-input[type="checkbox"].switcher:checked:after {
+.filed-upgrade[type="checkbox"].switcher:checked ~ .checkbox_radio:after {
   left: 50%;
   background: #8fd400;
+}
+.filed-upgrade[type="checkbox"].switcher:disabled ~ .checkbox_radio:before {
+  color: #a2a2a2 !important;
+  background: none !important;
+}
+.filed-upgrade[type="checkbox"].switcher:disabled ~ .checkbox_radio:after {
+  background: #a2a2a2 !important;
 }
 #search-form p {
   float: left;
@@ -382,6 +393,7 @@ input[type="checkbox"].switcher:checked:after {
   background: #bbbbbb;
   text-align: center;
   color: #fff;
+  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -443,6 +455,7 @@ input[type="checkbox"].switcher:checked:after {
   left: .5em;
   z-index: 1;
   line-height: 2.3em;
+  will-change: auto;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -494,6 +507,7 @@ input[type="checkbox"].switcher:checked:after {
   text-align: center;
   padding: 3px;
   background: transparent;
+  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid #bbbbbb;
@@ -604,6 +618,7 @@ input[type="checkbox"].switcher:checked:after {
   height: 18px;
   line-height: 18px;
   font-size: 0;
+  will-change: auto;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }

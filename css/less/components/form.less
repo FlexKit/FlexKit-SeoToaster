@@ -35,7 +35,7 @@ form{
     }
 
     // -- Recaptcha & Captcha style
-    .captcha when (@seotoaster = true){
+    .captcha when (@seotoaster){
 
         .captcha_image{
             width         : 65% !important;
@@ -111,7 +111,6 @@ label, .label{
 
 select, textarea, input{
     font-family      : @font-family-text;
-    padding          : .5em;
     border-width     : @input-border-width;
     border-style     : solid;
     border-color     : @input-border-color;
@@ -119,7 +118,7 @@ select, textarea, input{
     color            : @input-color;
     .border-radius(@input-border-radius);
     .box-shadow(1px 1px 3px @gray-light inset, @input-inner-shadow);
-    & when (@button-transition = true){
+    & when (@button-transition){
         .transition(all; 0.3s);
     }
 
@@ -135,31 +134,31 @@ select, textarea, input{
     }
 
     &.success, &.warning, &.error, &.info{
-        & when (@form-colors = true){
+        & when (@form-colors){
             color : @input-color;
         }
     }
-    &.success when (@form-color-success = true) and (@form-colors = true){
+    &.success when (@form-color-success) and (@form-colors){
         border-color : @brand-success;
         &:focus{
             .box-shadow(0 0 @input-shadow-size @brand-success; @input-shadow-focus);
         }
     }
-    &.warning when (@form-color-warning = true) and (@form-colors = true){
+    &.warning when (@form-color-warning) and (@form-colors){
         border-color : @brand-warning;
         &:focus{
             .box-shadow(0 0 @input-shadow-size @brand-warning; @input-shadow-focus);
         }
     }
     &.error, &.notvalid{
-        & when (@form-color-error = true) and (@form-colors = true){
+        & when (@form-color-error) and (@form-colors){
             border-color : @brand-error;
             &:focus{
                 .box-shadow(0 0 @input-shadow-size @brand-error; @input-shadow-focus);
             }
         }
     }
-    &.info when (@form-color-info = true) and (@form-colors = true){
+    &.info when (@form-color-info) and (@form-colors){
         border-color : @brand-info;
         &:focus{
             .box-shadow(0 0 @input-shadow-size @brand-info; @input-shadow-focus);
@@ -175,22 +174,24 @@ select, textarea, input{
 }
 
 input, select{
+    padding     : 0 .5em;
     height      : unit(@button-line-height * 2, em);
     line-height : unit(@button-line-height * 2, em) - 1;
 }
 
-//select{
-//    option{
+select{
+    option{
 //        color : @text-color;
-//    }
-//}
+    }
+}
 
 textarea{
+    padding    : .5em;
     min-height : 5em;
 }
 
-& when (@seotoaster = true){
-    .forgot-password, #remember-password{
+& when (@seotoaster){
+    .forgot-password, .retrieveFormBlock > form + a{
         float      : left;
         margin-top : -(@button-height-base - @padding-base-vertical);
     }
