@@ -1,32 +1,18 @@
 // Base styles
 // --------------------------------------------------
 .btn, button, [type="submit"], [type="button"], [type="reset"]{
-    & when (@seotoaster){
-        .button();
+    .button();
 
-        &[disabled], &.disabled{
-            border-color     : @gray-light !important;
-            color            : @gray-light !important;
-            background-color : @gray-lighter !important;
-            cursor           : default !important;
-            cursor           : not-allowed !important;
-            .box-shadow(~'none !important', @button-box-shadow);
-        }
+    &[disabled], &.disabled{
+        border-color     : @gray-light !important;
+        color            : @gray-light !important;
+        background-color : @gray-lighter !important;
+        cursor           : default !important;
+        cursor           : not-allowed !important;
+        .box-shadow(~'none !important', @button-box-shadow);
     }
 }
 .btn{
-    & when not(@seotoaster){
-        .button();
-
-        &[disabled], &.disabled{
-            border-color     : @gray-light !important;
-            color            : @gray-light !important;
-            background-color : @gray-lighter !important;
-            cursor           : default !important;
-            cursor           : not-allowed !important;
-            .box-shadow(~'none !important', @button-box-shadow);
-        }
-    }
 
     &.hide{
         &:extend(.hide);

@@ -3005,15 +3005,15 @@ a.info:hover {
 a.seosamba-color:hover {
   color: #547315;
 }
+.seosamba-bg {
+  color: #fff;
+  background-color: #83b421;
+}
 .seotoaster-color {
   color: #6464fd;
 }
 a.seotoaster-color:hover {
   color: #1818fc;
-}
-.seosamba-bg {
-  color: #fff;
-  background-color: #83b421;
 }
 .seotoaster-bg {
   color: #fff;

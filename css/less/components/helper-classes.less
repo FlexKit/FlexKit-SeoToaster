@@ -34,31 +34,34 @@
         color : darken(@brand-info, 15%);
     }
 }
-
 // Company brand colors
-.seosamba-color when (@seotoaster){
-    color : @brand-seosamba;
+.seosamba{
+    &-color{
+        color : @brand-seosamba;
 
-    a&:hover{
-        color : darken(@brand-seosamba, 15%);
+        a&:hover{
+            color : darken(@brand-seosamba, 15%);
+        }
+    }
+
+    &-bg{
+        color            : #fff;
+        background-color : @brand-seosamba;
     }
 }
-.seotoaster-color when (@seotoaster){
-    color : @brand-seotoaster;
+.seotoaster{
+    &-color{
+        color : @brand-seotoaster;
 
-    a&:hover{
-        color : darken(@brand-seotoaster, 15%);
+        a&:hover{
+            color : darken(@brand-seotoaster, 15%);
+        }
+    }
+    &-bg{
+        color            : #fff;
+        background-color : @brand-seotoaster;
     }
 }
-.seosamba-bg when (@seotoaster){
-    color            : #fff;
-    background-color : @brand-seosamba;
-}
-.seotoaster-bg when (@seotoaster){
-    color            : #fff;
-    background-color : @brand-seotoaster;
-}
-
 // Default backgound color
 .primary-bg when (@colors){
     background-color : @primary-bg;
@@ -80,16 +83,13 @@
     background-color : @brand-info;
     color            : #fff;
 }
-
 // Sizes
 .larger when (@size-larger) and (@sizes){ font-size : @font-size-larger; }
 .large when (@size-large) and (@sizes){ font-size : @font-size-large; }
 .small when (@size-small) and (@sizes){ font-size : @font-size-small; }
 .mini when (@size-small) and (@sizes){ font-size : @font-size-mini; }
-
-.uppercase{ text-transform: uppercase; }
-.lowecase{ text-transform: lowercase; }
-
+.uppercase{ text-transform : uppercase; }
+.lowecase{ text-transform : lowercase; }
 code{
     padding    : 1px 5px;
     background : #f7f7f7;
