@@ -1,4 +1,4 @@
-.ui-accordion:not(#cpanelul) when (@componentsJS-accordion = true){
+.ui-accordion:not(#cpanelul) when (@componentsJS-accordion){
     .ui-accordion-header{
         display       : block;
         position      : relative;
@@ -7,7 +7,7 @@
         margin-bottom : 0;
         color         : @accordion-header-color;
         background    : @accordion-header-bg;
-        padding       : @padding-base-vertical @padding-base-horizontal;
+        padding       : .5em .75em;
         min-height    : 0; // support: IE7
 
         &:hover{
@@ -23,13 +23,21 @@
             color      : @accordion-header-color-active;
             background : @accordion-header-bg-active;
         }
+
+        &.icon-right{
+            &:before{
+                color       : @brand-success;
+                float       : right;
+                line-height : inherit;
+            }
+        }
     }
 
     .ui-accordion-icons{
         .ui-accordion-header-icon{
             .inline-block;
-            margin-left  : -@padding-base-horizontal / 2;
-            margin-right : @padding-base-horizontal / 2;
+            margin-left  : -.25em;
+            margin-right : .25em;
             .icon-size(@icon-size-base);
         }
     }
@@ -43,7 +51,7 @@
         border-top    : none;
         margin-top    : 0;
         margin-bottom : 0;
-        padding       : @padding-base-vertical @padding-base-horizontal;
+        padding       : .75em;
         overflow      : auto;
     }
 }

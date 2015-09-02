@@ -49,9 +49,10 @@
 @grid-container-width : 960px;
 
 // Number of columns in the grid system
-@grid-columns         : 12;
-@grid-columns-tablet  : 6;
-@grid-columns-mobile  : 4;
+@grid-columns            : 12;
+@grid-columns-big-screen : 0;
+@grid-columns-tablet     : 6;
+@grid-columns-mobile     : 4;
 
 // Margin, to be divided by two and applied to the left and right of all columns
 @grid-margin-width    : 2%;
@@ -59,9 +60,10 @@
 // [Column system]
 //==================================================
 // Number of columns in the column system
-@columns           : 8;
-@columns-tablet    : 6;
-@columns-mobile    : 4;
+@columns            : 12;
+@columns-big-screen : 0;
+@columns-tablet     : 6;
+@columns-mobile     : 4;
 
 // Margin, to be divided by two and applied to the left and right of all columns
 @column-margin-width : @grid-margin-width;
@@ -75,13 +77,13 @@
 @gray-light   : lighten(#000, 73.5%); // #bbb
 @gray-lighter : lighten(#000, 93.5%); // #eee
 
-// Brand Color
+// Brand Color ( color schemes => http://javierbyte.github.io/cohesive-colors/ )
 //==================================================
-@brand-primary : #c2d2da;
-@brand-success : #8fd400; // #52ff8c | #A4F14E
-@brand-info    : #00a1f1; // #94C5FF
-@brand-warning : #ffbb00; // #ffd17b | #FADA32
-@brand-error   : #f65314; // #ff7b7b | #E7343A
+@brand-primary : #786271; // #c2d2da
+@brand-success : #34A859; // #52ff8c | #A4F14E | #8fd400
+@brand-info    : #4285F4; // #94C5FF           | #00a1f1
+@brand-warning : #FBBC05; // #ffd17b | #FADA32 | #ffbb00
+@brand-error   : #EA4335; // #ff7b7b | #E7343A | #f65314
 
 // Corporate Color
 //==================================================
@@ -234,7 +236,7 @@
 @table-bg           : transparent;// overall background-color
 @table-row-bg       : lighten(@gray-lighter, 3%);// is used in .table-striped
 @table-row-bg-hover : darken(@table-row-bg, 5%);// for hover
-@table-border-color : @gray-light;// table and cell border
+@table-border-color : darken(@gray-lighter, 7%);// table and cell border
 @table-thead-bg     : darken(@gray-lighter, 3%);// thead background-color
 @table-tfoot-bg     : darken(@gray-lighter, 10%);// tfoot background-color
 
@@ -332,13 +334,13 @@
 
 // [JQuery Modules Accordion = http://jqueryui.com/accordion/]
 //=============================================================
-@accordion-header-bg            : @primary-bg;
-@accordion-header-color         : @primary-color;
+@accordion-header-bg            : @gray-lighter;
+@accordion-header-color         : @gray-dark;
 
-@accordion-header-bg-hover      : darken(@accordion-header-bg, 5%);
+@accordion-header-bg-hover      : darken(@accordion-header-bg, 3%);
 @accordion-header-color-hover   : @accordion-header-color;
 
-@accordion-header-bg-active     : darken(@accordion-header-bg, 10%);
+@accordion-header-bg-active     : darken(@accordion-header-bg, 5%);
 @accordion-header-color-active  : @accordion-header-color;
 
 @accordion-content-bg           : #fff;
@@ -348,9 +350,9 @@
 // [JQuery Modules Tabs = http://jqueryui.com/tabs/]
 //=============================================================
 @tabs-nav-bg               : transparent;
-@tabs-nav-li-bg            : transparent;
-@tabs-nav-li-color         : @gray-light;
-@tabs-nav-li-border        : @gray-light;
+@tabs-nav-li-bg            : lighten(#000, 98%);
+@tabs-nav-li-color         : @gray;
+@tabs-nav-li-border        : @gray;
 
 @tabs-nav-li-bg-hover      : @tabs-nav-li-bg;
 @tabs-nav-li-color-hover   : @tabs-nav-li-color;

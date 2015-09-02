@@ -4,13 +4,15 @@
     width : 100%;
 
     .dataTables_filter{
-        //margin-bottom : 12px;
+        padding    : 5px;
+        text-align : right;
+        font-size  : @font-size-small;
 
         label{
-            width : 30%;
 
             input{
-                width : 75%;
+                margin-left : 5px;
+                width       : 250px;
             }
         }
     }
@@ -22,14 +24,10 @@
         cursor        : pointer;
         position      : relative;
         padding-right : 16px;
+        border-left   : 1px solid @table-border-color;
 
         &:after{
-            & when (@seotoaster){
-                .flexkit-icon()
-            }
-            & when not(@seotoaster){
-                &:extend(.flexkit-icon);
-            }
+            .flexkit-icon();
             content   : "\e0cd";
             font-size : 16px;
             height    : 16px;
@@ -85,11 +83,9 @@
             color       : #fff;
         }
 
-        & when (@seotoaster){
-            &.first, &.last, &.previous, &.next{
-                &:before, &:after{
-                    .flexkit-icon()
-                }
+        &.first, &.last, &.previous, &.next{
+            &:before, &:after{
+                .flexkit-icon()
             }
         }
 
@@ -97,9 +93,6 @@
             font-weight : bold;
 
             &:before, &:after{
-                & when not(@seotoaster){
-                    &:extend(.flexkit-icon);
-                }
                 font-size   : 15px;
                 font-weight : bold;
             }
@@ -108,9 +101,6 @@
         &.previous, &.next{
 
             &:before, &:after{
-                & when not(@seotoaster){
-                    &:extend(.flexkit-icon);
-                }
             }
         }
 
