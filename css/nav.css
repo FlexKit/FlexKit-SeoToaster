@@ -17,7 +17,7 @@
 .main_menu {
   position: relative;
   z-index: 110;
-  background: #c2d2da;
+  background: #786271;
   color: #ffffff;
 }
 .main_menu > li {
@@ -26,7 +26,7 @@
 }
 .main_menu > li:hover,
 .main_menu a.current {
-  background: #a2bbc7;
+  background: #5c4b57;
 }
 .main_menu > li:hover ul {
   display: block;
@@ -194,7 +194,7 @@ aside .listxrss p {
 .news-item .news-date:before {
   top: 2px;
   font-size: 16px;
-  color: #c2d2da;
+  color: #786271;
 }
 .news-item .news-tags a {
   color: #888888;
@@ -225,10 +225,10 @@ aside .listxrss p {
   color: #555555;
 }
 .breadcrumbs a {
-  color: #c2d2da;
+  color: #786271;
 }
 .breadcrumbs a:hover {
-  color: #83a3b3;
+  color: #40343c;
 }
 @media (min-width: 801px) {
   .mobile-bar,
@@ -287,7 +287,7 @@ aside .listxrss p {
   top: 0;
   line-height: 2.3em;
   color: #ffffff;
-  background: #c2d2da;
+  background: #786271;
 }
 .mobile-bar.top .btn.icon {
   width: 2.3em;
@@ -296,7 +296,7 @@ aside .listxrss p {
   bottom: 0;
   line-height: 3.45em;
   color: #ffffff;
-  background: #c2d2da;
+  background: #786271;
 }
 .mobile-bar.bottom .btn.icon {
   width: 3.45em;
