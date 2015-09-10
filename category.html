@@ -7,7 +7,7 @@
     <body>
 
         <!-- Container -->
-        <main class="container">
+        <div id="page" class="container">
 
             <!-- Include header template -->
             {$template:_header}
@@ -15,15 +15,15 @@
             <h1 class="grid_12" role="heading">{$page:h1}</h1>
 
             <!-- Content box -->
-            <article class="grid_6 push_3" role="main">
+            <section class="grid_6 push_3" role="main">
                 {repeat:Section box:key:1}
-                <section>
+                <article>
                     <h2>{$header:content_key}</h2>
                     {$content:content_key1}
                     {$content:content_key2}
-                </section>
+                </article>
                 {/repeat}
-            </article>
+            </section>
 
             <!-- Left box -->
             <aside class="grid_3 pull_6" role="complementary">
@@ -48,7 +48,7 @@
             <!-- Footer -->
             <!-- Include Footer template -->
             {$template:_footer}
-        </main>
+        </div>
 
         <!-- Include mobile elements template -->
         {$template:_mobile elements}

@@ -7,7 +7,7 @@
     <body>
 
         <!-- Container -->
-        <main class="container">
+        <div id="page" class="container">
 
             <!-- Include header template -->
             {$template:_header}
@@ -15,19 +15,18 @@
             <h1 class="grid_12" role="heading">{$page:h1}</h1>
 
             <!-- Content box -->
-            <article class="grid_12 page404" role="main">
-                <section class="grid_6 alpha first">404</section>
-                <section class="grid_6 omega">
+            <section class="grid_12 page404" role="main">
+                <article class="grid_6 alpha first">404</article>
+                <article class="grid_6 omega">
                     {$content:404:static}<br>
                     <a class="btn inverse large" href="{$website:url}" title="{$header:button:readonly}">{$header:button:static}</a>
-                </section>
-            </article>
-
+                </article>
+            </section>
 
             <!-- Footer -->
             <!-- Include Footer template -->
             {$template:_footer}
-        </main>
+        </div>
 
         <!-- Include mobile elements template -->
         {$template:_mobile elements}
