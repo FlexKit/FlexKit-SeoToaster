@@ -7,14 +7,14 @@
     <body>
 
         <!-- Container  NO SEARCH, NO SOCIAL LINKS -->
-        <div id="container" class="container">
+        <div id="page" class="container">
 
             <!-- Header    ONLY LOGO, PHONE, ADDRESS -->
             <header class="grid_12 mb20px" role="banner">
-                <h1 class="logo grid_8 alpha">
-                    <a href="{$website:url}" title="{$page:h1}">
-                        <img src="{$plugin:widcard:bizLogo:url}" alt="{$plugin:widcard:BizOrgName:notag}" width="75" height="85">
-                        {$plugin:widcard:BizOrgName:notag}
+                <h1 class="logo h1 grid_8 alpha" itemscope itemtype="http://schema.org/Organization">
+                    <a href="{$website:url}" title="{$plugin:widcard:BizOrgName:notag}" itemprop="url">
+                        <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="75" height="85">
+                        <span itemprop="name">{$plugin:widcard:BizOrgName:notag}</span>
                     </a>
                 </h1>
                 <div class="grid_4 alpha omega mt10px">
@@ -25,7 +25,7 @@
             </header>
 
             <!-- Content box -->
-            <main id="content" class="grid_12" role="main">
+            <main class="grid_12" role="main">
                 <!-- Table products to order -->
                 <table class="checkout-cart-table cart-content">
                     <thead class="t-hide m-hide">
@@ -56,87 +56,73 @@
                 <!-- end table products to order -->
 
                 <!-- Checkout widget -->
-                <div class="grid_9 alpha">
+                <section class="grid_9 alpha">
                     {$store:checkout}
 
                     <div class="security">We do not store your credit card details. In fact, your credit card information never passes through our site — it is captured directly by our payment gateway through a securely encrypted connection.</div>
                     <!-- Select the required payment gateways-->
                     {paymentgateways}
-                    {$quote:form}
+                        {$quote:form}
 
-                    {$plugin:authorize:button}
-                    {$plugin:paypal:button}
-                    {$plugin:paybox:checkout}
-                    {$plugin:authorize:creditcard}
-                    {$plugin:paypal:creditcard}
-                    {$plugin:eway:creditcard}
-                    {$plugin:elavon:creditcard}
-                    {$plugin:securepay:creditcard}
+                        {$plugin:authorize:button}
+                        {$plugin:paypal:button}
+                        {$plugin:paybox:checkout}
+                        {$plugin:authorize:creditcard}
+                        {$plugin:paypal:creditcard}
+                        {$plugin:eway:creditcard}
+                        {$plugin:elavon:creditcard}
+                        {$plugin:securepay:creditcard}
                     {/paymentgateways}
-                </div>
+                </section>
 
-                <div id="checkoutsummary" class="grid_3 omega t-grid_3 t-omega t-push_3">
+                <section id="checkoutsummary" class="grid_3 omega t-grid_3 t-omega t-push_3">
                     {$store:cartsummary}
                     {$store:buyersummary}
                     <h3 class="checkout-widget-title">{$header:contactinf}</h3>
                     <div class="preview-content">
                         {$content:contact_inf}
                     </div>
-                </div>
+                </section>
                 <!-- end checkout widget -->
             </main>
 
+            <!-- Footer  ONLY ADDRESS, PHONE, TESTIMONIALS -->
+            <footer class="mt30px" itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
+                <!-- Container -->
+                <div class="container">
+                    <div class="footer-box grid_3 t-grid_3">
+                        <h3>{$header:footer2:static}</h3>
+                        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">{$plugin:widcard:BizAddress1:notag}</span>
+                            <span itemprop="addressLocality">{$plugin:widcard:BizCity:notag}</span>,
+                            <span itemprop="postalCode">{$plugin:widcard:BizZip:notag}</span>
+                            <span itemprop="addressRegion">{$plugin:widcard:BizState:notag}</span>
+                            <meta itemprop="addressCountry" content="EN"/>
+                        </address>
+                    </div>
+                    <div class="footer-box grid_3 t-grid_3">
+                        <h3>{$header:footer4:static}</h3>
+                        <p itemprop="telephone">{$plugin:widcard:BizTelephone:notag}</p>
+                        <a href="mailto:{$plugin:widcard:BizEmail:notag}" itemprop="email">{$plugin:widcard:BizEmail:notag}</a>.
+                        <a href="{$website:url}" itemprop="url">{$website:url}</a>
+                    </div>
+                    <div class="footer-box grid_6">
+                        <h3>{$header:footer3:static}</h3>
+                        {$content:testimonials}
+                    </div>
+                    <hr class="grid_12">
+
+                    <!-- Footer info -->
+                    <div class="grid_4 text-left">{$content:footer-info:static}</div>
+                </div>
+            </footer>
         </div>
 
-        <!-- Footer  ONLY ADDRESS, PHONE, TESTIMONIALS -->
-        <footer class="mt30px" itemscope itemtype="http://schema.org/LocalBusiness" role="contentinfo">
-            <!-- Container -->
-            <div class="container">
-                <div class="footer-box grid_3 t-grid_3">
-                    <h3>{$header:footer2:static}</h3>
-                    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">{$plugin:widcard:BizAddress1:notag}</span>
-                        <span itemprop="addressLocality">{$plugin:widcard:BizCity:notag}</span>,
-                        <span itemprop="postalCode">{$plugin:widcard:BizZip:notag}</span>
-                        <span itemprop="addressRegion">{$plugin:widcard:BizState:notag}</span>
-                        <meta itemprop="addressCountry" content="EN"/>
-                    </address>
-                </div>
-                <div class="footer-box grid_3 t-grid_3">
-                    <h3>{$header:footer4:static}</h3>
-                    <p itemprop="telephone">{$plugin:widcard:BizTelephone:notag}</p>
-                    <a href="mailto:{$plugin:widcard:BizEmail:notag}" itemprop="email">{$plugin:widcard:BizEmail:notag}</a>.
-                    <a href="{$website:url}" itemprop="url">{$website:url}</a>
-                </div>
-                <div class="footer-box grid_6">
-                    <h3>{$header:footer3:static}</h3>
-                    {$content:testimonials}
-                </div>
-                <hr class="grid_12">
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
 
-                <!-- Footer info -->
-                <div class="grid_4 text-left">{$content:footer-info:static}</div>
-            </div>
-        </footer>
-
-        <!-- Include mobile elements template but without social links!!!-->
-        <!-- Top bar for mobile, with button show/hide menu -->
-        <div class="mobile-bar top clearfix">
-            <span class="menu-btn left" data-menu-position="left">Menu</span>
-            <span class="dropdown-btn btn transparent icon icon-list3 fl-right" data-menu=".dropdown-menu" data-menu-position="top right">_SAMPLE TEXT_</span>
-        </div>
-
-        <aside class="mobile-menu left">
-            {$menu:main:_main menu}
-        </aside>
-
-        <aside class="dropdown-menu">
-            {$menu:main:_main menu}
-        </aside>
-
-        <!-- SCRIPTS ZONE -->
-        <script src="js/scripts.min.js"></script>
-        <script src="js/system/flexkit.min.js"></script>
+        <!-- Include scripts template -->
+        {$template:_scripts}
 
         <!-- begin olark code -->
         <div class="olark">
@@ -144,8 +130,6 @@
             <div>After registering with Olark replace this placeholder with functioning Olark script in the checkout and quote template</div>
         </div>
         <!-- end olark code -->
-
-
 
         <!--Add Google Conversion tracking code-->
         {postpurchasecode}
@@ -187,12 +171,6 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
 
-        </script>
-        {/postpurchasecode}
-
-
-        {postpurchasecode}
-        <script type="text/javascript">
             var google_conversion_id = XXXXXXXXX;
             var google_conversion_language = "en";
             var google_conversion_format = "3";
@@ -202,16 +180,12 @@
             var google_conversion_currency = "EUR";
             var google_remarketing_only = false;
         </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
         <noscript>
             <div style="display:inline;">
                 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/983895424/?value={$postpurchase:subtotal:clean:withouttax}&currency_code=EUR&label=ZLNvCO6eoVYQgJuU1QM&guid=ON&script=0"/>
             </div>
         </noscript>
         {/postpurchasecode}
-
-
-
     </body>
 </html>

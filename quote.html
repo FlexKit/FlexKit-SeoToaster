@@ -114,9 +114,8 @@
 
         <!-- SCRIPTS ZONE -->
         <script type="text/javascript">
-            $(document).ready(function() {
-
-                if($('.cart-content td.product-remove a').length==0) {
+            $(function() {
+                if(!$('.cart-content td.product-remove a').length) {
                     $('.cart-content .product-remove').remove();
                 }
             });
