@@ -7,7 +7,7 @@
     <body>
 
         <!-- Container -->
-        <main class="container">
+        <div id="page" class="container">
 
             <!-- Include header template -->
             {$template:_header}
@@ -15,10 +15,10 @@
             <h1 class="grid_12" role="heading">{$page:h1}</h1>
 
             <!-- Content box -->
-            <article class="grid_9" role="main">
+            <section class="grid_9" role="main">
                 <!-- news list -->
             {newslist:NEWS-LIST_NAME}
-                <section class="news-item">
+                <article class="news-item">
                     {$news:actions}
                     <time class="news-item-date small block mb10px" datetime="{$news:date:Y-m-d}">
                         <i class="icon-calendar2 icon16"></i>
@@ -30,9 +30,9 @@
                     <a class="news-title large grid_10 omega" href="{$news:url}">{$news:title}</a>
                     <p class="news-description grid_10 omega small mb10px">{$news:teaser}</p>
                     <p class="news-tags small cl-both text-right">{$news:tags}</p>
-                </section>
+                </article>
             {/newslist}
-            </article>
+            </section>
 
             <!-- Right box -->
             <aside class="grid_3" role="complementary">
@@ -47,7 +47,7 @@
             <!-- Footer -->
             <!-- Include Footer template -->
             {$template:_footer}
-        </main>
+        </div>
 
         <!-- Include mobile elements template -->
         {$template:_mobile elements}
