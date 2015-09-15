@@ -18,25 +18,16 @@ html, body{
     }
 }
 
-::-moz-selection{
-    background : @text-select-bg;
-    color      : @text-select-color;
-}
-
-::selection{
-    background : @text-select-bg;
-    color      : @text-select-color;
-}
+.selection();
 
 blockquote, q{
     quotes : none;
+
+    &:before, &:after{
+        content : none;
+    }
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after{
-    content : '';
-    content : none;
-}
 em{ font-style : italic; }
 table{
     border-spacing  : 0;
@@ -135,7 +126,6 @@ textarea{
 }
 
 [type="checkbox"], [type="radio"]{
-    padding : 0;
     border  : none;
     height  : auto;
 
@@ -155,18 +145,6 @@ select optgroup{
     font-style  : inherit;
     font-size   : inherit;
     font-family : inherit;
-}
-
-button, [type="button"], [type="reset"], [type="submit"]{
-    -webkit-appearance : button;
-
-    &:focus{
-        .box-shadow(none; @input-shadow-focus);
-    }
-}
-
-[disabled]{
-    cursor : default;
 }
 
 // Reset for all navigation items, related-products
@@ -190,7 +168,6 @@ button, [type="button"], [type="reset"], [type="submit"]{
     }
 }
 
-.static_menu, .static_menu li,
 .main_menu, .main_menu li, .main_menu ul, .main_menu ul li,
 .sitemap, .sitemap li,
 .listpages, .listpages li,
