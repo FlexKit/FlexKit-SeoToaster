@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   background-color: #786271;
-  color: #ffffff;
+  color: #FFF;
   padding: 5px;
 }
 .product .product-image {
@@ -55,7 +55,7 @@
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #ffffff;
+  color: #FFF;
   border-color: #382632;
   background-color: #786271;
   border: none;
@@ -72,7 +72,7 @@
 .product .tcart-add:hover,
 .product .tcart-add:active,
 .product .tcart-add.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #1a1117;
   background-color: #5c4b57;
 }
@@ -120,7 +120,7 @@
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #ffffff;
+  color: #FFF;
   border-color: #382632;
   background-color: #786271;
   border: none;
@@ -136,7 +136,7 @@
 .product-item .tcart-add:hover,
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #1a1117;
   background-color: #5c4b57;
 }
@@ -217,7 +217,7 @@
   font-size: 1.1em;
 }
 #checkout-widget-preview .checkout-edit {
-  color: #ea4335;
+  color: #EA4335;
   float: right;
   font-size: 12px;
   font-weight: normal;
@@ -422,12 +422,12 @@
   display: block;
   line-height: 1;
   background: #786271;
-  color: #ffffff;
+  color: #FFF;
 }
 .olark div {
   height: 0;
   padding: 7px 10px;
-  background: #ffffff;
+  background: #FFF;
   color: #555555;
   will-change: auto;
   -webkit-transition: all 0.5s ease;
@@ -636,13 +636,13 @@
   width: auto;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio {
-  border-color: #34a859;
+  border-color: #34A859;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio:before {
-  background: #34a859;
+  background: #34A859;
 }
 #shipper-select .shipping-methods li input:checked ~ .shipping-price:after {
-  border-color: #34a859;
+  border-color: #34A859;
 }
 #shipper-select .shipping-methods li .checkbox_radio {
   margin: -5px 5px 0 0;
@@ -677,7 +677,7 @@
 }
 #shipper-select .shipping-methods li input:checked + .checkbox_radio {
   display: block;
-  border-color: transparent #34a859 #34a859 transparent;
+  border-color: transparent #34A859 #34A859 transparent;
   height: 0;
   width: 0;
   border-width: 15px;
@@ -704,7 +704,7 @@
   margin-left: 2px;
 }
 #shippingNotes.notvalid {
-  box-shadow: 0 0 1px 1px #ff0000;
+  box-shadow: 0 0 1px 1px #f00;
 }
 #payment-zone form.paymentForm {
   margin-bottom: 28px;
@@ -1020,7 +1020,7 @@
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #ffffff;
+  color: #FFF;
   border-color: #382632;
   background-color: #786271;
   -webkit-user-select: none;
@@ -1037,7 +1037,7 @@
 #user-grid-part ul.user-stats li:hover,
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
-  color: #ffffff;
+  color: #FFF;
   border-color: #1a1117;
   background-color: #5c4b57;
 }
