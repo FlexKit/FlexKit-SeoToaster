@@ -7,20 +7,26 @@
     <body>
 
         <!-- Container -->
-        <div id="page" class="container">
+        <div id="page" class="container page404">
+            <!-- Header -->
+            <header role="banner">
+                <div class="logo h1">
+                    <a href="#" title="">
+                        <img src="images/logo.png" alt="" width="75" height="75">
+                        <span>FlexKit</span>
+                    </a>
+                </div>
+            </header>
 
-            <!-- Include header template -->
-            {$template:_header}
-
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
+            <h1 class="error uppercase text-center fs64" role="heading">{$page:h1}</h1>
 
             <!-- Content box -->
-            <section class="grid_12 page404" role="main">
-                <article class="grid_6 alpha first">404</article>
-                <article class="grid_6 omega">
+            <section class="text-center mb30px" role="main">
+                <div style="line-height: 1; font-size: 17em;">404</div>
+                <div class="larger">
                     {$content:404:static}<br>
-                    <a class="btn inverse large" href="{$website:url}" title="{$header:button:readonly}">{$header:button:static}</a>
-                </article>
+                    <a class="btn outline large" href="{$website:url}" title="{$header:button:readonly}">{$header:button:static}</a>
+                </div>
             </section>
 
             <!-- Footer -->
@@ -28,10 +34,8 @@
             {$template:_footer}
         </div>
 
-        <!-- Include mobile elements template -->
-        {$template:_mobile elements}
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
+        <!-- SCRIPTS ZONE -->
+        <script src="js/system/flexkit.min.js"></script>
+        <script src="js/scripts.min.js"></script>
     </body>
 </html>
