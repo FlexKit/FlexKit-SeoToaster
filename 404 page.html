@@ -8,15 +8,9 @@
 
         <!-- Container -->
         <div id="page" class="container page404">
-            <!-- Header -->
-            <header role="banner">
-                <div class="logo h1">
-                    <a href="#" title="">
-                        <img src="images/logo.png" alt="" width="75" height="75">
-                        <span>FlexKit</span>
-                    </a>
-                </div>
-            </header>
+
+            <!-- Include header template -->
+            {$template:_header}
 
             <h1 class="error uppercase text-center fs64" role="heading">{$page:h1}</h1>
 
@@ -34,8 +28,10 @@
             {$template:_footer}
         </div>
 
-        <!-- SCRIPTS ZONE -->
-        <script src="js/system/flexkit.min.js"></script>
-        <script src="js/scripts.min.js"></script>
+        <!-- Include mobile elements template -->
+        {$template:_mobile elements}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
     </body>
 </html>
