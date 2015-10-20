@@ -456,7 +456,6 @@ aside .listxrss p {
 @media only screen and (max-width: 800px) {
   .mobile-menu {
     z-index: 102;
-    will-change: auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
