@@ -130,7 +130,6 @@ input {
   border-color: #bbbbbb;
   background-color: #fff;
   color: #2f2f2f;
-  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -242,7 +241,6 @@ textarea.resize {
   height: auto;
   position: absolute;
   z-index: -10;
-  will-change: auto;
   -webkit-transition: none 0.5s ease;
   transition: none 0.5s ease;
   opacity: 0;
@@ -323,7 +321,6 @@ textarea.resize {
 .filed-upgrade[type="checkbox"].switcher ~ .checkbox_radio:after {
   content: '';
   background: #EA4335;
-  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background: #bbbbbb;
@@ -385,7 +382,6 @@ textarea.resize {
   background: #bbbbbb;
   text-align: center;
   color: #fff;
-  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -445,7 +441,6 @@ textarea.resize {
   left: .5em;
   z-index: 1;
   line-height: 2.3em;
-  will-change: auto;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -497,7 +492,6 @@ textarea.resize {
   text-align: center;
   padding: 3px;
   background: transparent;
-  will-change: auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid #bbbbbb;
@@ -602,7 +596,6 @@ textarea.resize {
   height: 18px;
   line-height: 18px;
   font-size: 0;
-  will-change: auto;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
