@@ -986,9 +986,6 @@
 }
 #quoteControlls .quote-controlls {
   background: rgba(170, 170, 170, 0.8);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#ccaaaaaa', EndColorStr='#ccaaaaaa')";
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#ccaaaaaa', EndColorStr='#ccaaaaaa');
-  zoom: 1 !important;
   border-top: 5px solid #888;
   bottom: 0;
   left: 0;
