@@ -34,9 +34,6 @@
 }
 .carousel .carousel-btn {
   background: rgba(255, 255, 255, 0.75);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#bfffffff', EndColorStr='#bfffffff')";
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#bfffffff', EndColorStr='#bfffffff');
-  zoom: 1 !important;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -71,9 +68,6 @@
 }
 .carousel .carousel-btn:hover {
   background: rgba(255, 255, 255, 0.9);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#e6ffffff', EndColorStr='#e6ffffff')";
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#e6ffffff', EndColorStr='#e6ffffff');
-  zoom: 1 !important;
 }
 .smoke-base .smokebg {
   position: fixed;
@@ -83,9 +77,6 @@
   bottom: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.5);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#80ffffff', EndColorStr='#80ffffff')";
-  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#80ffffff', EndColorStr='#80ffffff');
-  zoom: 1 !important;
 }
 .smoke-base .dialog {
   position: fixed;
@@ -1194,6 +1185,15 @@
   min-width: 100% !important;
   width: auto;
   height: auto;
+}
+.responsive-ratio > img._9x16,
+.responsive-ratio > img._3x4,
+.responsive-ratio > img._1x1 {
+  max-width: none;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .responsive-ratio.bottom > img,
 .responsive-ratio.bottom ._lbox img,
