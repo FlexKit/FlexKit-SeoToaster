@@ -17,7 +17,7 @@
 .main_menu {
   position: relative;
   z-index: 110;
-  background: #786271;
+  background: #F79D84;
   color: #FFF;
 }
 .main_menu > li {
@@ -26,7 +26,7 @@
 }
 .main_menu > li:hover,
 .main_menu a.current {
-  background: #5c4b57;
+  background: #f47754;
 }
 .main_menu > li:hover ul {
   display: block;
@@ -37,6 +37,7 @@
 .main_menu a {
   display: block;
   padding: 8px 12px;
+  text-decoration: none;
   color: inherit;
 }
 .main_menu ul {
@@ -194,7 +195,7 @@ aside .listxrss p {
 .news-item .news-date:before {
   top: 2px;
   font-size: 16px;
-  color: #786271;
+  color: #F79D84;
 }
 .news-item .news-tags a {
   color: #888888;
@@ -225,10 +226,10 @@ aside .listxrss p {
   color: #555555;
 }
 .breadcrumbs a {
-  color: #786271;
+  color: #07A0C3;
 }
 .breadcrumbs a:hover {
-  color: #40343c;
+  color: #034f61;
 }
 @media (min-width: 801px) {
   .mobile-bar,
@@ -289,7 +290,7 @@ aside .listxrss p {
   top: 0;
   line-height: 2.3em;
   color: #FFF;
-  background: #786271;
+  background: #F79D84;
 }
 .mobile-bar.top .btn.icon {
   width: 2.3em;
@@ -298,7 +299,7 @@ aside .listxrss p {
   bottom: 0;
   line-height: 3.45em;
   color: #FFF;
-  background: #786271;
+  background: #F79D84;
 }
 .mobile-bar.bottom .btn.icon {
   width: 3.45em;
