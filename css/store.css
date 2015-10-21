@@ -2,7 +2,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #786271;
+  background-color: #F79D84;
   color: #FFF;
   padding: 5px;
 }
@@ -56,8 +56,8 @@
   display: inline-block;
   vertical-align: middle;
   color: #FFF;
-  border-color: #382632;
-  background-color: #786271;
+  border-color: #ef6144;
+  background-color: #F79D84;
   border: none;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -72,8 +72,8 @@
 .product .tcart-add:active,
 .product .tcart-add.active {
   color: #FFF;
-  border-color: #1a1117;
-  background-color: #5c4b57;
+  border-color: #eb3915;
+  background-color: #f47754;
 }
 .product .tcart-add:active,
 .product .tcart-add.active {
@@ -120,8 +120,8 @@
   display: inline-block;
   vertical-align: middle;
   color: #FFF;
-  border-color: #382632;
-  background-color: #786271;
+  border-color: #ef6144;
+  background-color: #F79D84;
   border: none;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
@@ -135,8 +135,8 @@
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
   color: #FFF;
-  border-color: #1a1117;
-  background-color: #5c4b57;
+  border-color: #eb3915;
+  background-color: #f47754;
 }
 .product-item .tcart-add:active,
 .product-item .tcart-add.active {
@@ -146,9 +146,9 @@
 .errors {
   margin: 0 0 10px;
   padding: 0;
-  background: #f9cdc9;
-  border: 1px solid #f18279;
-  color: #7d241c;
+  background: #ffd2cd;
+  border: 1px solid #ff8e81;
+  color: #882e23;
   font-size: 12px;
 }
 .ui-state-error li,
@@ -215,7 +215,7 @@
   font-size: 1.1em;
 }
 #checkout-widget-preview .checkout-edit {
-  color: #EA4335;
+  color: #ff5641;
   float: right;
   font-size: 12px;
   font-weight: normal;
@@ -418,7 +418,7 @@
   font-size: 1.2em;
   display: block;
   line-height: 1;
-  background: #786271;
+  background: #F79D84;
   color: #FFF;
 }
 .olark div {
@@ -433,7 +433,7 @@
   bottom: 0;
 }
 .olark:hover a.title {
-  background: #5c4b57;
+  background: #f47754;
 }
 .olark:hover div {
   height: auto;
@@ -632,13 +632,13 @@
   width: auto;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio {
-  border-color: #34A859;
+  border-color: #43e38f;
 }
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio:before {
-  background: #34A859;
+  background: #43e38f;
 }
 #shipper-select .shipping-methods li input:checked ~ .shipping-price:after {
-  border-color: #34A859;
+  border-color: #43e38f;
 }
 #shipper-select .shipping-methods li .checkbox_radio {
   margin: -5px 5px 0 0;
@@ -673,7 +673,7 @@
 }
 #shipper-select .shipping-methods li input:checked + .checkbox_radio {
   display: block;
-  border-color: transparent #34A859 #34A859 transparent;
+  border-color: transparent #43e38f #43e38f transparent;
   height: 0;
   width: 0;
   border-width: 15px;
@@ -1014,8 +1014,8 @@
   display: inline-block;
   vertical-align: middle;
   color: #FFF;
-  border-color: #382632;
-  background-color: #786271;
+  border-color: #ef6144;
+  background-color: #F79D84;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1030,8 +1030,8 @@
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
   color: #FFF;
-  border-color: #1a1117;
-  background-color: #5c4b57;
+  border-color: #eb3915;
+  background-color: #f47754;
 }
 #user-grid-part ul.user-stats li:active,
 #user-grid-part ul.user-stats li.active {
