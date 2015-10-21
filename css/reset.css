@@ -204,11 +204,11 @@ th {
   box-sizing: border-box;
 }
 ::-moz-selection {
-  background: #786271;
+  background: #F79D84;
   color: #FFF;
 }
 ::selection {
-  background: #786271;
+  background: #F79D84;
   color: #FFF;
 }
 blockquote,
@@ -440,6 +440,7 @@ select optgroup {
 .listxrss a,
 .related-products a {
   display: block;
+  text-decoration: none;
 }
 .listpages img,
 .listcategories img,
