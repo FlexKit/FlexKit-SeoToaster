@@ -64,7 +64,6 @@
 .static_menu li {
   float: left;
   padding: 0 8px;
-  line-height: 1;
 }
 .static_menu li + li {
   border-left: 1px solid #888888;
@@ -221,15 +220,6 @@ aside .listxrss p {
   float: left;
   margin-right: 2%;
   width: 150px;
-}
-.breadcrumbs {
-  color: #555555;
-}
-.breadcrumbs a {
-  color: #07A0C3;
-}
-.breadcrumbs a:hover {
-  color: #034f61;
 }
 @media (min-width: 801px) {
   .mobile-bar,

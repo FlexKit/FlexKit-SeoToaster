@@ -96,11 +96,7 @@
 .flexkit-icon,
 [class*="icon-"]:before,
 [class^=" icon-"]:before,
-[data-icon]:before,
-.ui-datepicker-prev:before,
-.ui-datepicker-next:before,
-.ui-dialog-titlebar-close:before,
-.newslog-tag-filter:before {
+[data-icon]:before {
   font-family: flexkit-icons;
   speak: none;
   font-style: normal;
@@ -2577,15 +2573,6 @@ a.inherit-color:hover {
 .white-bg {
   background: #fff;
 }
-.fade25 {
-  background: rgba(0, 0, 0, 0.25);
-}
-.fade50 {
-  background: rgba(0, 0, 0, 0.5);
-}
-.fade75 {
-  background: rgba(0, 0, 0, 0.75);
-}
 .gray-darker {
   color: #222222;
 }
@@ -3109,20 +3096,6 @@ h6:first-child,
 .slide .slide-description .h6 {
   color: inherit;
 }
-footer h1,
-footer h2,
-footer h3,
-footer h4,
-footer h5,
-footer h6,
-footer .h1,
-footer .h2,
-footer .h3,
-footer .h4,
-footer .h5,
-footer .h6 {
-  color: #222222;
-}
 h1:empty,
 h2:empty,
 h3:empty,
@@ -3168,9 +3141,6 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 15px;
-}
-p img {
-  margin: 0;
 }
 address {
   margin-bottom: 20px;
@@ -3951,7 +3921,6 @@ button.disabled,
   border-color: #bbbbbb !important;
   color: #bbbbbb !important;
   background-color: #eeeeee !important;
-  cursor: default !important;
   cursor: not-allowed !important;
   box-shadow: none !important;
 }
@@ -4298,6 +4267,7 @@ hr.dotted {
   font-size: 0.85em;
   font-weight: bold;
   line-height: 1em;
+  white-space: nowrap;
   text-align: center;
   display: inline-block;
   vertical-align: baseline;
@@ -4425,10 +4395,8 @@ hr.dotted {
 .callout {
   margin-bottom: 20px;
   padding: 8px 12px;
-  border-width: 1px 1px 1px 4px;
-  border-style: solid;
-  border-color: #ddd;
-  border-left-color: #F79D84;
+  border: 1px solid #ddd;
+  border-left: 4px solid #F79D84;
   color: inherit;
   border-radius: 3px;
 }

@@ -170,7 +170,6 @@
   color: #555555;
   background: #eeeeee;
   padding: .5em .75em;
-  min-height: 0;
 }
 .ui-accordion:not(#cpanelul) .ui-accordion-header:hover {
   color: #555555;
@@ -427,6 +426,18 @@
   font-size: 16px;
 }
 .ui-dialog .ui-dialog-titlebar-close:before {
+  font-family: flexkit-icons;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "\e0a2";
 }
 .ui-dialog .ui-dialog-titlebar-close .ui-button-text {
@@ -583,6 +594,21 @@
 }
 .ui-datepicker .ui-datepicker-header > a span {
   display: none;
+}
+.ui-datepicker .ui-datepicker-header > a.ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-header > a.ui-datepicker-next:before {
+  font-family: flexkit-icons;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .ui-datepicker .ui-datepicker-header > a.ui-datepicker-prev {
   left: 0;
