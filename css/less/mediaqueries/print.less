@@ -39,11 +39,7 @@ a{
         }
     }
 
-    &[href*=".html"]:after{
-        content : "(@{website-url}" attr(href) ")";
-    }
-
-    &[href^="http"]:after, &[href^="//"]:after{
+    &[href*=".html"]:after, &[href^="http"]:after, &[href^="//"]:after{
         content : "(" attr(href) ")";
     }
 }

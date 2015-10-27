@@ -3,15 +3,7 @@ header {
   color: #555555;
 }
 header .logo {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-header .logo a {
   text-decoration: none;
-}
-header .logo img {
-  margin: 0;
-  box-shadow: none;
 }
 section {
   background: #FFF;
@@ -479,14 +471,12 @@ textarea.resize {
   font-size: 0;
 }
 .img_gallery li {
-  font-size: 14px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.img_gallery li {
+  font-size: 1rem;
   position: relative;
   margin: 5px;
   text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 .img_gallery a img {
   position: relative;
@@ -665,11 +655,6 @@ textarea.resize {
   .d-visible,
   .t-visible {
     display: none !important;
-  }
-}
-@media only screen and (max-width: 800px) {
-  #slider .description-slider {
-    display: none;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -884,9 +869,7 @@ textarea.resize {
   a._lbox:after {
     display: none;
   }
-  a[href*=".html"]:after {
-    content: "(WEBSITE-URL" attr(href) ")";
-  }
+  a[href*=".html"]:after,
   a[href^="http"]:after,
   a[href^="//"]:after {
     content: "(" attr(href) ")";
