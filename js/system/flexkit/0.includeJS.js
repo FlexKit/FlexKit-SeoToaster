@@ -4,11 +4,11 @@
         themeIndex = url.indexOf('themes') + 7,
         themeName = url.substring(themeIndex, url.indexOf('/', themeIndex));
 
-    if(!jQuery().carousel) {
+    if(window.jQuery && !jQuery().carousel) {
         loadScript(websiteUrl + "themes/" + themeName + "/js/plugin/jquery.carousel.min.js");
     }
 
-    if(!jQuery().chosen && document.getElementsByClassName("chosen-select").length || document.getElementsByClassName("chosen-select-deselect").length) {
+    if(window.jQuery && !jQuery().chosen && document.getElementsByClassName("chosen-select").length || document.getElementsByClassName("chosen-select-deselect").length) {
         loadScript(websiteUrl + "/themes/" + themeName + "/js/plugin/jquery.chosen.min.js");
     }
 

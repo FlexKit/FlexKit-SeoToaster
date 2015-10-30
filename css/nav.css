@@ -17,7 +17,7 @@
 .main_menu {
   position: relative;
   z-index: 110;
-  background: #F79D84;
+  background: #50514f;
   color: #FFF;
 }
 .main_menu > li {
@@ -26,7 +26,7 @@
 }
 .main_menu > li:hover,
 .main_menu a.current {
-  background: #f47754;
+  background: #373736;
 }
 .main_menu > li:hover ul {
   display: block;
@@ -194,7 +194,7 @@ aside .listxrss p {
 .news-item .news-date:before {
   top: 2px;
   font-size: 16px;
-  color: #F79D84;
+  color: #50514f;
 }
 .news-item .news-tags a {
   color: #888888;
@@ -280,7 +280,7 @@ aside .listxrss p {
   top: 0;
   line-height: 2.3em;
   color: #FFF;
-  background: #F79D84;
+  background: #50514f;
 }
 .mobile-bar.top .btn.icon {
   width: 2.3em;
@@ -289,7 +289,7 @@ aside .listxrss p {
   bottom: 0;
   line-height: 3.45em;
   color: #FFF;
-  background: #F79D84;
+  background: #50514f;
 }
 .mobile-bar.bottom .btn.icon {
   width: 3.45em;
