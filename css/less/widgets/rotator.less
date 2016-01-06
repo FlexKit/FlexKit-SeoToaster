@@ -1,19 +1,19 @@
-.rotator when (@widget-rotator){
+.rotator when (@widget-rotator) {
     position   : relative;
     overflow   : hidden;
     background : #fff;
 
     // -- Description
-    .slide-description{
+    .slide-description {
         padding : @padding-large-vertical @padding-large-horizontal;
         color   : #FFF;
         .rgba(#000; 0.5);
     }
 
-    img{
+    img {
         width : 100%;
 
-        & ~ .slide-description{
+        & ~ .slide-description {
             position : absolute;
             right    : 0;
             bottom   : 0;
@@ -22,9 +22,9 @@
     }
 }
 
-.cycle-slideshow when (@widget-rotator){
+.cycle-slideshow when (@widget-rotator) {
 
-    .slide{
+    .slide {
         position   : absolute;
         top        : 0;
         left       : 0;
@@ -32,7 +32,7 @@
         height     : 100%;
         list-style : none;
 
-        & > a.generator-links:not(:first-child), & > a.tpopup:not(:first-child){
+        & > a.generator-links:not(:first-child), & > a.tpopup:not(:first-child) {
             position : absolute;
             top      : 10px;
             left     : 10px;
@@ -40,7 +40,7 @@
     }
 
     // -- Pager
-    .cycle-pager{
+    .cycle-pager {
         position    : absolute;
         top         : 5px;
         right       : 0;
@@ -49,7 +49,7 @@
         font-size   : 0;
         line-height : 0;
 
-        > *{
+        > * {
             .inline-block;
             cursor     : pointer;
             margin     : 0 3px;
@@ -58,11 +58,11 @@
             .border-radius(14px);
             .icon-size(10px; true);
 
-            &:hover{
+            &:hover {
                 background : darken(@primary-bg, 10%);
             }
 
-            &.cycle-pager-active{
+            &.cycle-pager-active {
                 cursor     : default;
                 color      : @primary-color;
                 background : @primary-bg;
@@ -70,7 +70,7 @@
         }
     }
 
-    [class*="cycle-"].action-button{
+    [class*="cycle-"].action-button {
         background : @primary-bg;
         color      : @primary-color;
         position   : absolute;
@@ -83,38 +83,38 @@
         .icon-size(@slider-button-size; true);
         .transition();
 
-        &:hover{
+        &:hover {
             background : darken(@primary-bg, 10%);
             color      : @primary-color;
         }
 
-        &:before{
+        &::before {
             font-family : @font-family-icons;
         }
 
-        &.cycle-prev{
+        &.cycle-prev {
             left : -@slider-button-size * 3;
 
-            &:before{
+            &::before {
                 content : "\e0c5";
             }
         }
 
-        &.cycle-next{
+        &.cycle-next {
             right : -@slider-button-size * 3;
 
-            &:before{
+            &::before {
                 content : "\e0c6";
             }
         }
     }
 
-    &:hover .action-button{
-        &.cycle-prev{
+    &:hover .action-button {
+        &.cycle-prev {
             left : 10px;
         }
 
-        &.cycle-next{
+        &.cycle-next {
             right : 10px;
         }
 

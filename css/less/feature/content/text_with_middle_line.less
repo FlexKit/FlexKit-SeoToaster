@@ -6,12 +6,12 @@
 @padding-vertical  : 0;
 @padding-horizontal: @padding-base-horizontal;
 
-.text-line when (@text-with-middle-line){
+.text-line when (@text-with-middle-line) {
     position      : relative;
     text-align    : center;
     margin-bottom : 1.5em;
-    
-    & > *{
+
+    & > * {
         margin     : 0;
         background : @wrap-line-bg;
         position   : relative;
@@ -19,8 +19,8 @@
         .inline-block(middle);
         padding    : @padding-vertical @padding-horizontal;
     }
-    
-    &:after{
+
+    &::after {
         content          : '';
         position         : absolute;
         z-index          : 0;

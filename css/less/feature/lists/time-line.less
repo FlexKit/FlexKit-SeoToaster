@@ -1,11 +1,12 @@
 @arrow-size         : 10px;
 @time-item-width    : 45%;
 @bullet-radius-size : 10px;
-.time-line when (@time-line){
+
+.time-line when (@time-line) {
     position : relative;
     .clearfix();
 
-    &:before{
+    &:before {
         content    : '';
         position   : absolute;
         left       : 0;
@@ -16,45 +17,45 @@
         background : @gray-lighter;
     }
 
-    .time-item{
+    .time-item {
         margin  : 0;
         padding : 0;
         height  : @bullet-radius-size * 5;
 
         // ODD POSTS
-        &:nth-child(odd){
-            & + .time-item .time-content{
+        &:nth-child(odd) {
+            & + .time-item .time-content {
             }
 
-            .time-content{
+            .time-content {
                 clear : left;
                 float : left;
 
-                &:before{
+                &::before {
                     margin-right : -@bullet-radius-size;
                     right        : -(unit((50 - @time-item-width) / @time-item-width * 100, %));
                 }
-                &:after{
+                &::after {
                     left         : 100%;
                     border-right : none;
                 }
             }
         }
         // EVEN POSTS
-        &:nth-child(even){
-            & + .time-item .time-content{
+        &:nth-child(even) {
+            & + .time-item .time-content {
                 top : 5em;
             }
 
-            .time-content{
+            .time-content {
                 clear : right;
                 float : right;
 
-                &:before{
+                &::before {
                     margin-left : -@bullet-radius-size;
                     left        : -(unit((50 - @time-item-width) / @time-item-width * 100, %));
                 }
-                &:after{
+                &::after {
                     right       : 100%;
                     border-left : none;
                 }
@@ -62,7 +63,7 @@
         }
     }
 
-    .time-content{
+    .time-content {
         position      : relative;
         width         : @time-item-width;
         padding       : @padding-base-vertical @padding-base-horizontal;
@@ -71,13 +72,13 @@
         background    : @gray-lighter;
 
         // ARROW & DOT
-        &:before, &:after{
+        &::before, &::after {
             content  : '';
             position : absolute;
         }
 
         // BULLET
-        &:before{
+        &::before {
             top           : 10px;
             width         : 0;
             height        : 0;
@@ -86,7 +87,7 @@
         }
 
         // ARROW
-        &:after{
+        &::after {
             top          : 10px + @bullet-radius-size - @arrow-size;
             width        : 0;
             height       : 0;

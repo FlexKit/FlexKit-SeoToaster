@@ -236,8 +236,8 @@ aside .listxrss p {
   body[data-dropdown-open] {
     overflow: hidden;
   }
-  body[data-menu-open]:after,
-  body[data-dropdown-open]:after {
+  body[data-menu-open]::after,
+  body[data-dropdown-open]::after {
     content: '';
     position: fixed;
     top: 0;
@@ -273,7 +273,7 @@ aside .listxrss p {
 .mobile-bar .btn.btn-caption {
   line-height: 1.225em;
 }
-.mobile-bar .btn.btn-caption:before {
+.mobile-bar .btn.btn-caption::before {
   line-height: inherit;
 }
 .mobile-bar.top {
@@ -398,7 +398,7 @@ aside .listxrss p {
 .menu-btn.left {
   float: left;
 }
-.menu-btn.left:before {
+.menu-btn.left::before {
   margin-right: 0.23em;
   float: left;
 }
@@ -406,7 +406,7 @@ aside .listxrss p {
   float: right;
   text-align: right;
 }
-.menu-btn.right:before {
+.menu-btn.right::before {
   margin-left: 0.23em;
   float: right;
 }
@@ -414,7 +414,7 @@ aside .listxrss p {
   width: 2.3em;
   text-indent: -9999px;
 }
-.menu-btn.icon:before {
+.menu-btn.icon::before {
   margin-right: 0;
   margin-left: 0;
 }
@@ -429,7 +429,7 @@ aside .listxrss p {
   color: #FFF;
   background: rgba(0, 0, 0, 0.1);
 }
-.sub-menu-btn:before {
+.sub-menu-btn::before {
   content: '';
   height: 20px;
   width: 20px;
@@ -488,20 +488,20 @@ aside .listxrss p {
   .menu-btn.active {
     background: rgba(0, 0, 0, 0.05);
   }
-  .menu-btn:before {
+  .menu-btn::before {
     width: 0.65714286em;
   }
   .menu-btn.left {
     padding-left: 0;
   }
-  .menu-btn.left.active:before {
+  .menu-btn.left.active::before {
     margin-left: -0.46em;
     margin-right: 0.69em;
   }
   .menu-btn.right {
     padding-right: 0;
   }
-  .menu-btn.right.active:before {
+  .menu-btn.right.active::before {
     margin-right: -0.46em;
     margin-left: 0.69em;
   }
