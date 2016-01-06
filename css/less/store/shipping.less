@@ -1,22 +1,22 @@
 //checkout shipping form
-#checkout-user-address{
+#checkout-user-address {
     .inline-block-wrap(top);
 
-    & > fieldset{
+    & > fieldset {
         .grid-elements(2; 2*@grid-margin-width; true; 1; 1);
     }
 }
 
 //////////shipping methods
-#shipper-select{
+#shipper-select {
     @selected-shipping-color: @brand-success;
 
-    .shipping-methods{
+    .shipping-methods {
         overflow : hidden;
         margin   : 0;
         padding  : 0;
 
-        li{
+        li {
             position      : relative;
             .inline-block(top);
             list-style    : none;
@@ -25,32 +25,32 @@
             overflow      : hidden;
             margin-bottom : 10px;
 
-            &:hover{
+            &:hover {
                 background : @gray-lighter;
             }
 
-            label{
+            label {
                 padding    : 5%;
                 min-height : 60px;
                 margin     : 0;
                 width      : 100%;
             }
 
-            input{
+            input {
                 margin : 5px 5px 0 0;
                 width  : auto;
 
-                &:checked{
-                    & ~ .checkbox_radio{
+                &:checked {
+                    & ~ .checkbox_radio {
                         border-color : @selected-shipping-color;
 
-                        &:before{
+                        &::before {
                             background : @selected-shipping-color;
                         }
                     }
 
-                    & ~ .shipping-price{
-                        &:after{
+                    & ~ .shipping-price {
+                        &:after {
                             border-color : @selected-shipping-color;
                         }
                     }
@@ -58,15 +58,15 @@
 
             }
 
-            .checkbox_radio{
+            .checkbox_radio {
                 margin : -5px 5px 0 0;
             }
 
-            .shipping-price{
+            .shipping-price {
                 font-size   : @font-size-large;
                 font-weight : bold;
 
-                &:after{
+                &::after {
                     content  : '';
                     border   : 2px solid darken(@gray-lighter, 10%);
                     position : absolute;
@@ -77,11 +77,11 @@
                 }
             }
 
-            .shipping-method-title{
+            .shipping-method-title {
                 display : block;
             }
 
-            p{
+            p {
                 border-top  : 1px dotted @gray-lighter;
                 clear       : both;
                 color       : #000;
@@ -92,16 +92,16 @@
             }
 
             //it will work only with activated _checkboxRadio() script on ajax loading
-            & when (@shipping-checkmark-style){
+            & when (@shipping-checkmark-style) {
                 border : none;
 
-                .checkbox_radio{
+                .checkbox_radio {
                     display : none;
                 }
 
-                input{
-                    &:checked{
-                        & + .checkbox_radio{
+                input {
+                    &:checked {
+                        & + .checkbox_radio {
                             display       : block;
                             border-color  : transparent  @selected-shipping-color  @selected-shipping-color transparent;
                             height        : 0;
@@ -114,7 +114,7 @@
                             background    : none;
                             margin-right  : 0;
 
-                            &:before{
+                            &::before {
                                 position    : relative;
                                 content     : "\e0a3";
                                 font-family : @font-family-icons;
@@ -132,12 +132,12 @@
         }
     }
 }
-
-#shippingNotes{ //// WHAT IS IT ?????
+#shippingNotes {
+    //// WHAT IS IT ?????
     margin-top  : -14px;
     margin-left : 2px;
 
-    &.notvalid{
+    &.notvalid {
         .box-shadow(0 0 1px 1px #f00);
     }
 }

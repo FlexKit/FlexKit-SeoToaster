@@ -80,8 +80,8 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) inset;
 }
 .show-more {
-  border-bottom: 1px solid #DDDDDD;
-  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   display: block;
   font-size: 20px;
   padding: 10px 0;
@@ -634,7 +634,7 @@
 #shipper-select .shipping-methods li input:checked ~ .checkbox_radio {
   border-color: #4fc752;
 }
-#shipper-select .shipping-methods li input:checked ~ .checkbox_radio:before {
+#shipper-select .shipping-methods li input:checked ~ .checkbox_radio::before {
   background: #4fc752;
 }
 #shipper-select .shipping-methods li input:checked ~ .shipping-price:after {
@@ -647,7 +647,7 @@
   font-size: 1.25em;
   font-weight: bold;
 }
-#shipper-select .shipping-methods li .shipping-price:after {
+#shipper-select .shipping-methods li .shipping-price::after {
   content: '';
   border: 2px solid #d5d5d5;
   position: absolute;
@@ -684,7 +684,7 @@
   background: none;
   margin-right: 0;
 }
-#shipper-select .shipping-methods li input:checked + .checkbox_radio:before {
+#shipper-select .shipping-methods li input:checked + .checkbox_radio::before {
   position: relative;
   content: "\e0a3";
   font-family: flexkit-icons;

@@ -1,25 +1,25 @@
 // quote form on the checkout page
-form.toaster-quote{
+form.toaster-quote {
     #checkout-widget &, .product & {
         margin-bottom : 2em;
 
         // usual widget {$ quote : form}
-        & > fieldset{
+        & > fieldset {
             .grid-elements(2; 2*@grid-margin-width; true; 1; 1);
             float : left;
         }
 
-        .captcha{
+        .captcha {
             clear : both;
         }
 
         //specific widget like  { $ quote:form:firstname*:lastname:city:zip:email*:phone:address1}
-        @media only screen and (min-width : (@responsive-size-tablet + 1)){
-            & > p when (@responsive){
+        @media only screen and (min-width : (@responsive-size-tablet + 1)) {
+            & > p when (@responsive) {
                 float : left;
                 width : 48%;
 
-                &:nth-child(odd){
+                &:nth-child(odd) {
                     margin-right : 4%;
                 }
             }
@@ -27,64 +27,58 @@ form.toaster-quote{
     }
     .product & {
         fieldset {
-            border: none;
-            padding: 0;
+            border  : none;
+            padding : 0;
         }
     }
 
 }
 
-
-
-
 // Quote
 //==================================================
-#quote-search{
+#quote-search {
     padding : 7px;
     width   : 700px;
     display : block;
     margin  : 0 auto;
 }
-
-.ui-menu{
+.ui-menu {
     z-index : 55 !important;
 }
-
-#storeinfo{
+#storeinfo {
     text-align : right;
 
-    h1{
+    h1 {
         font-size   : 2em;
         font-weight : bold;
         margin      : 0;
     }
 
-    p{
+    p {
         margin : 0;
     }
 }
 
 // quote-info
 //==================================================
-.quote-info{
+.quote-info {
     margin-bottom : 2em;
 
-    @media only screen and (min-width : (@responsive-size-tablet + 1)){
-        & when (@responsive){
+    @media only screen and (min-width : (@responsive-size-tablet + 1)) {
+        & when (@responsive) {
             float : left;
             width : 48%;
         }
-
-        &:first-child when (@responsive){
+        &:first-child when (@responsive) {
             margin-right : 4%;
         }
     }
 
-    & > p{
+    & > p {
         margin : 0;
     }
 
-    p.title{
+    p.title {
         font-size      : 1.5em;
         color          : @heading-color;
         border-bottom  : 1px solid @gray-light;
@@ -92,23 +86,23 @@ form.toaster-quote{
         margin-bottom  : 0.5em;
     }
 
-    fieldset{
+    fieldset {
         margin  : 0;
         padding : 0;
         border  : none;
 
-        & > p{
+        & > p {
             margin-bottom : 0.5em;
             .clearfix-mixin();
         }
     }
 
-    label{
+    label {
         margin : 0.25em 0 0;
         float  : left;
         width  : 35%;
 
-        &[for='same-for-shipping']{
+        &[for='same-for-shipping'] {
             width        : auto;
             margin-right : 5px;
         }
@@ -116,38 +110,38 @@ form.toaster-quote{
 
     input,
     select,
-    textarea{
+    textarea {
         float : left;
         width : 65%;
     }
 }
 
 //===============quote-details=================
-#quote-details{
+#quote-details {
     clear : both;
 
-    h2{
+    h2 {
         margin-bottom : 5px;
     }
 
-    input{
+    input {
         width   : auto;
         height  : auto;
         padding : 5px;
     }
 
-    span{
+    span {
         color : #000;
     }
 }
 
 // Quote admin-panel
 //==================================================
-#quoteControlls{
+#quoteControlls {
     height : 70px;
 
-    .quote-controlls{
-        .rgba(rgb(170, 170, 170), 0.8);
+    .quote-controlls {
+        .rgba(rgb(170, 170, 170), 80%);
         border-top : 5px solid #888;
         bottom     : 0;
         left       : 0;
@@ -158,7 +152,7 @@ form.toaster-quote{
         text-align : center;
     }
 
-    .quote-search{
+    .quote-search {
         width     : 500px;
         padding   : 5px;
         font-size : 18px;

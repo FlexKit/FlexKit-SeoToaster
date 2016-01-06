@@ -1,74 +1,74 @@
-#user-grid-part{
-    ul.user-stats{
+#user-grid-part {
+    ul.user-stats {
         list-style : none outside none;
         padding    : 0;
         margin     : 0 0 1em;
 
-        li{
+        li {
             .button();
             margin-bottom : 0;
         }
     }
 
-    .user-orders-range{
+    .user-orders-range {
         margin      : 0 0 1em;
         white-space : nowrap;
 
-        label{
+        label {
             display : inline-block;
             width   : auto;
         }
 
-        input{
+        input {
             margin : 0 0.75em;
             width  : 100px;
         }
     }
 }
 
-#user-orders-table{
+#user-orders-table {
     margin-bottom    : 1em;
     background-color : #fff;
     border           : 1px solid @table-border-color;
 
     th,
-    td{
+    td {
         vertical-align : middle;
         padding        : .5em .75em;
         border-top     : 1px solid @table-border-color;
 
-        &:last-child{
+        &:last-child {
             text-align : center;
         }
 
-        p{
+        p {
             margin : 0;
         }
     }
 }
 
-#user-edit-account{
-    & > p{
+#user-edit-account {
+    & > p {
         margin-bottom : 0.5em;
         .clearfix-mixin();
     }
 
-    @media only screen and (min-width : (@responsive-size-mobile + 1)){
-        & when (@responsive){
+    @media only screen and (min-width : (@responsive-size-mobile + 1)) {
+        & when (@responsive) {
             max-width : 700px;
 
-            label{
+            label {
                 margin : 0.5em 0 0;
                 float  : left;
                 width  : 35%;
             }
 
-            span{
+            span {
                 line-height : 2.5em;
             }
 
             span,
-            input{
+            input {
                 float : left;
                 width : 65%;
             }
@@ -76,15 +76,15 @@
     }
 }
 
-#user-orders-table_paginate{
-    span{
+#user-orders-table_paginate {
+    span {
         border  : none;
         padding : 0;
         margin  : 0;
     }
 
     .paginate_active,
-    .paginate_button_disabled{
+    .paginate_button_disabled {
         color  : @gray-light;
         cursor : default;
     }
