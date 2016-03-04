@@ -215,10 +215,10 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-q:before,
-blockquote:after,
-q:after {
+blockquote::before,
+q::before,
+blockquote::after,
+q::after {
   content: none;
 }
 em {
@@ -362,15 +362,15 @@ select optgroup {
   font-size: inherit;
   font-family: inherit;
 }
-.main_menu:after,
-.listpages:after,
-.listcategories:after,
-.featureditem:after,
-.featureapage:after,
-.search-results:after,
-.relatedpages:after,
-.listxrss:after,
-.related-products:after {
+.main_menu::after,
+.listpages::after,
+.listcategories::after,
+.featureditem::after,
+.featureapage::after,
+.search-results::after,
+.relatedpages::after,
+.listxrss::after,
+.related-products::after {
   content: "";
   display: table;
   clear: both;
@@ -513,7 +513,7 @@ select optgroup {
   visibility: hidden;
   height: 0;
 }
-.clearfix:after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;

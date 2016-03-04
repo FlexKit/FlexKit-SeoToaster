@@ -15,6 +15,7 @@
 
 .ws-nowrap { white-space : nowrap !important; }
 .ws-normal { white-space : normal !important; }
+.ws-pre { white-space : pre-wrap !important; }
 
 .text-light { font-weight : 300 !important; }
 .text-normal { font-weight : normal !important; font-style : normal !important; }
@@ -46,6 +47,9 @@
 .word-break {
     -ms-word-break : break-all;
     word-break     : break-all;
+    // Non standard for webkit
+    //word-break: break-word;
+    .hyphens();
 }
 .hide, .ui-helper-hidden, .ui-helper-hidden-accessible { display : none; }
 
@@ -193,7 +197,7 @@
             display : none !important;
         }
 
-        &:before{
+        &::before{
             font-family : @font-family-icons;
             content     : "\e008";
         }
@@ -201,7 +205,7 @@
         & + .generator-links{
             margin-left : 1px;
 
-            &:before{
+            &::before{
                 content : "\e095";
             }
         }
@@ -233,7 +237,7 @@
             padding : @padding-small-vertical;
             .icon-size(@icon-size-base);
 
-            &:before{
+            &::before{
                 content : "\e00a";
             }
         }
