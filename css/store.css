@@ -189,13 +189,19 @@
 .quote-summary-row span,
 .post-purchase-row span {
   width: 50%;
-  float: right;
 }
 .cart-summary-row span:first-child,
 .quote-summary-row span:first-child,
 .post-purchase-row span:first-child {
   float: left;
   font-weight: bold;
+  text-align: left;
+}
+.cart-summary-row span:first-child + span,
+.quote-summary-row span:first-child + span,
+.post-purchase-row span:first-child + span {
+  float: right;
+  text-align: right;
 }
 .cart-summary-row input,
 .quote-summary-row input,

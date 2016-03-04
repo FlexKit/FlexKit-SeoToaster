@@ -68,7 +68,6 @@ function dialogInit(option) {
             hide        : {
                 effect : data.dialogEffect || effect
             },
-            //title       : data.dialogTitle || title,
             width       : data.dialogWidth || width,
             height      : data.dialogHeight || height,
             buttons     : buttons,

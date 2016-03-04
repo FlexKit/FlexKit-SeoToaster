@@ -14,7 +14,7 @@
             <p>{$plugin:widcard:BizEmail:notag}</p>
         </div>
         <div style="clear:both">
-        {postpurchasecode}
+            {postpurchasecode}
             <div class="post-purchase">
                 <h3 class="post-purchase-report-customer-order-id">Order number # {$postpurchase:id}</h3>
 
@@ -73,9 +73,7 @@
                     <thead>
                     <tr>
                         <th class="product-info" colspan="2">Product</th>
-                        <th class="product-unit-price">Price</th>
                         <th class="product-qty">Qty</th>
-                        <th class="product-total">Total</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -89,171 +87,107 @@
                             <span class="post-purchase-report-product-name">{$postpurchase:cartitem:name}</span>
                             <div class="options">{$postpurchase:cartitem:options:cleanOptionPrice}</div>
                         </td>
-                        <td class="product-unit-price">{$postpurchase:cartitem:price}</td>
                         <td class="product-qty">{$postpurchase:cartitem:qty}</td>
-                        <td class="product-total">{$postpurchase:cartitem:total} </td>
                     </tr>
                     {/postpurchasecartcontent}
                     </tbody>
                 </table>
-                <div class="post-purchase-report-summary">
-                    <h3 class="summary-title">Summary</h3>
-
-                    <div class="post-purchase-row cart-subtotal">
-                        <div>Sub-Total:</div>
-                        <div class="text-right">{$postpurchase:subTotal}</div>
-                    </div>
-                    <div class="post-purchase-row cart-discount">
-                        <div>Discount:</div>
-                        <div class="text-right">{$postpurchase:discount}</div>
-                    </div>
-                    <div class="post-purchase-row cart-shipping">
-                        <div>Shipping:</div>
-                        <div class="text-right">{$postpurchase:shippingPrice}</div>
-                    </div>
-                    <div class="post-purchase-row cart-total-tax">
-                        <div>Total Tax:</div>
-                        <div class="text-right">{$postpurchase:totalTax}</div>
-                    </div>
-                    <div class="post-purchase-row cart-total">
-                        <div>Total: </div>
-                        <div class="text-right">{$postpurchase:total}</div>
-                    </div>
-                </div>
             </div>
-        {/postpurchasecode}
+            {/postpurchasecode}
         </div>
     </div>
 
     <style>
-        * {
-            padding : 0;
-            margin  : 0;
-        }
+        * { padding: 0; margin: 0; }
         body {
-            background-color : #fff;
-            font             : 14px Arial, Verdana, Sans-serif;
+            background-color: #fff;
+            font: 14px Arial, Verdana, Sans-serif;
         }
-        h1 {
-            margin : 0;
-            float  : left;
-            width  : 40%;
-        }
+        h1 { margin:0; float: left; width: 40%; }
         p {
-            margin  : 0;
-            padding : 0;
+            margin: 0;
+            padding: 0;
         }
         img {
-            max-width      : 95px;
-            max-height     : 95px;
-            vertical-align : middle;
+            max-width: 95px;
+            max-height: 95px;
+            vertical-align: middle;
         }
         img.pickup-location-map {
-            max-width  : 500px !important;
-            max-height : 300px !important;
+            max-width:500px !important;
+            max-height:300px !important;
         }
         img.logo {
-            max-width  : 300px !important;
-            max-height : 300px !important;
+            max-width:300px !important;
+            max-height:300px !important;
         }
         a {
-            text-decoration : none;
+            text-decoration: none;
         }
-        p:empty, span:empty {
-            display : none;
-        }
+        p:empty, span:empty {display:none;}
         #address {
-            color      : #333;
-            float      : right;
-            width      : 50%;
-            text-align : right;
+            color: #333;
+            float: right;
+            width: 50%;
+            text-align: right;
 
         }
         #address h3 {
-            color     : #111;
-            margin    : 0;
-            font-size : 15px;
-            padding   : 0;
+            color: #111;
+            margin: 0;
+            font-size: 15px;
+            padding: 0;
         }
         .post-purchase h3.post-purchase-report-customer-order-id {
-            color       : #111;
-            font-size   : 22px;
-            font-weight : bold;
-            margin      : 20px 0 0;
-            padding     : 0;
+            color: #111;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0 0;
+            padding: 0;
         }
         .createdOrderDate {
-            font-size     : 12px;
-            margin-bottom : 20px;
+            font-size: 12px;
+            margin-bottom: 20px;
         }
         table.cart-content {
-            border           : none;
-            width            : 100%;
-            overflow         : hidden;
-            background-color : transparent;
-            border-collapse  : separate;
-            border-spacing   : 0 11px;
-            margin           : 0;
+            border: none;
+            width: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            border-collapse: separate;
+            border-spacing: 0 11px;
+            margin:0;
         }
+
+
         table.cart-content th {
-            background-color : #eee;
-            padding          : 12px 10px 0;
-            text-align       : center;
+            background-color: #eee;
+            padding: 12px 10px 0;
+            text-align: center;
         }
         table.cart-content td {
-            border-bottom : 1px solid #eee;
-            padding       : 5px 10px;
-            text-align    : center;
+            border-bottom: 1px solid #EEE;
+            padding: 5px 10px;
+            text-align: center;
         }
         table.cart-content th.product-info, table.cart-content td.product-info {
-            text-align : left;
+            text-align: left;
         }
         .post-purchase .post-purchase-report-shipping,
         .post-purchase .post-purchase-report-billing {
-            float    : left;
-            width    : 50%;
-            margin   : 0 0 15px;
-            overflow : hidden;
+            float: left;
+            width: 50%;
+            margin: 0 0 15px;
+            overflow: hidden;
         }
         .post-purchase .post-purchase-report-shipping h4,
         .post-purchase .post-purchase-report-billing h4 {
-            margin-top    : 0;
-            margin-bottom : 5px;
-            font-size     : 15px;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 15px;
         }
-        /*summary  */
-        .post-purchase-report-summary {
-            float  : right;
-            width  : 25%;
-            margin : 0;
-        }
-        .post-purchase-report-summary .summary-title {
-            padding     : 3px 10px;
-            margin      : 0;
-            background  : #eee;
-            font-size   : 14px;
-            font-weight : bold;
-        }
-        .post-purchase-report-summary .summary-title div {
-            width      : 50%;
-            text-align : right;
-        }
-        .post-purchase-report-summary .post-purchase-row {
-            padding  : 3px 10px;
-            overflow : hidden;
-        }
-        .post-purchase-report-summary .post-purchase-row div {
-            float      : left;
-            display    : block;
-            min-width  : 50%;
-            width      : 50%;
-            text-align : right;
-        }
-        .post-purchase .post-purchase-report-summary div.cart-total {
-            padding       : 5px 10px;
-            font-weight   : bold;
-            border-bottom : 1px solid #eee;
-        }
+
+
     </style>
 </body>
 </html>
