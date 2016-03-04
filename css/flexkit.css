@@ -86,6 +86,9 @@
   top: 0;
   left: 0;
   text-align: center;
+  background: inherit;
+  border: inherit;
+  box-shadow: 0 0 0 transparent;
 }
 .smoke-base .dialog.primary .dialog-inner {
   color: #2b2b2a;
@@ -211,7 +214,7 @@
 .ui-tabs {
   position: relative;
 }
-.ui-tabs:after {
+.ui-tabs::after {
   content: "";
   display: table;
   clear: both;
@@ -223,7 +226,7 @@
   margin: 0;
   padding: 0;
 }
-.ui-tabs .ui-tabs-nav:after {
+.ui-tabs .ui-tabs-nav::after {
   content: "";
   display: table;
   clear: both;
@@ -596,8 +599,8 @@
 .ui-datepicker .ui-datepicker-header > a span {
   display: none;
 }
-.ui-datepicker .ui-datepicker-header > a.ui-datepicker-prev:before,
-.ui-datepicker .ui-datepicker-header > a.ui-datepicker-next:before {
+.ui-datepicker .ui-datepicker-header > a.ui-datepicker-prev::before,
+.ui-datepicker .ui-datepicker-header > a.ui-datepicker-next::before {
   font-family: flexkit-icons;
   speak: none;
   font-style: normal;
@@ -864,8 +867,7 @@
 }
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
-  -webkit-filter: inherit;
-          filter: inherit;
+  filter: inherit;
 }
 .ui-slider.success .ui-slider-handle {
   background: #286429;

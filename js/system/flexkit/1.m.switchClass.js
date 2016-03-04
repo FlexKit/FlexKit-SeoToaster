@@ -22,7 +22,10 @@ function replaceSelector(oldSelector, newSelector, removeSelector) {
             }
         }
     } catch(e) {
-        alert(e);
+        if(e.name !== "SecurityError") {
+            throw e;
+        }
+        return;
     }
 }
 
@@ -37,7 +40,7 @@ function changeRule(rule, pattern, newSelector, oldSelector, type, patternRemove
     if(patternRemove && patternRemove.test(rule.selectorText)) {
         var selectorsWithActive = rule.selectorText.split(',');
 
-        for(k = 0; k <= selectorsWithActive.length; k++) {
+        for(var k = 0; k <= selectorsWithActive.length; k++) {
             // Add string to the new selector if it didn't match
             if(patternRemove.test(selectorsWithActive[k])) {
                 selectorsWithActive.splice(k, 1);

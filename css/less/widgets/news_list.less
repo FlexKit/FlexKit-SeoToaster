@@ -1,29 +1,29 @@
 .news-item when (@widget-news-list){
 
-    .news-image{
+    .news-item-image{
         img{ }
     }
 
-    .news-title{ }
+    .news-item-title{ }
 
     .newslog-admin-actions{
         text-align : right;
         a{ }
     }
 
-    .news-date{
+    .news-item-date{
         color : lighten(@text-color, 15%);
 
-        &:before{
+        &::before{
             top       : 2px;
             font-size : 16px;
             color     : @primary-bg;
         }
     }
 
-    .news-description{ }
+    .news-item-description{ }
 
-    .news-tags{
+    .news-item-tags{
 
         a{
             .link-color(@gray);
@@ -32,7 +32,7 @@
                 margin-left : 0.5em;
             }
 
-            &:before{
+            &::before{
                 color        : @gray;
                 margin-right : 0.5em;
             }
@@ -40,7 +40,7 @@
     }
 
     .newslog-tag-filter{
-        &:before{
+        &::before{
             content : "\e02f";
         }
     }
