@@ -255,7 +255,7 @@ aside .listxrss p {
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: 0 0 7px #555555;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 .mobile-bar::after {
   content: "";
@@ -524,6 +524,9 @@ aside .listxrss p {
   margin: 0 !important;
   overflow: auto;
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+}
+.dropdown-menu.open {
+  display: block;
 }
 .dropdown-menu.top-right,
 .dropdown-menu.bottom-right {

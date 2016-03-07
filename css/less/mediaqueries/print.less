@@ -53,7 +53,7 @@ a {
         }
     }
 
-    &[href*=".html"]:after, &[href^="http"]:after, &[href^="//"]::after {
+    &[href*=".html"]::after, &[href^="http"]::after, &[href^="//"]::after {
         content : "(" attr(href) ")";
     }
 }

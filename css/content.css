@@ -859,8 +859,8 @@ ul.list-select > li.active::after {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 95%;
-  max-width: 960px;
+  width: 960px;
+  max-width: 95%;
 }
 .container::after {
   content: "";
@@ -4221,9 +4221,21 @@ button.disabled,
   border-color: #28b0ed;
   background-color: #28b0ed;
 }
+.btn.outline.white {
+  color: #fff;
+  border-color: #fff;
+  background-color: transparent;
+}
+.btn.outline.white:hover,
+.btn.outline.white:active,
+.btn.outline.white.active {
+  color: #000;
+  border-color: #fff;
+  background-color: #fff;
+}
 .btn.outline.inverse {
   color: #d5d5d5;
-  border-color: #b2b2b2;
+  border-color: #d5d5d5;
 }
 .btn.caption {
   padding-top: .5em;

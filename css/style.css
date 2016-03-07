@@ -836,8 +836,8 @@ textarea.resize {
   a._lbox::after {
     display: none;
   }
-  a[href*=".html"]:after,
-  a[href^="http"]:after,
+  a[href*=".html"]::after,
+  a[href^="http"]::after,
   a[href^="//"]::after {
     content: "(" attr(href) ")";
   }
